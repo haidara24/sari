@@ -345,7 +345,7 @@ class _TraderHomeScreenState extends State<TraderHomeScreen>
                                                 (context, error, stackTrace) =>
                                                     Center(
                                               child: Text(
-                                                "ح ي",
+                                                "",
                                                 style: TextStyle(
                                                   fontSize: 28.sp,
                                                 ),
@@ -355,7 +355,7 @@ class _TraderHomeScreenState extends State<TraderHomeScreen>
                                         ),
                                       ),
                                       Text(
-                                        "حيدرة يوسف",
+                                        "SFIFF",
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 26.sp,
