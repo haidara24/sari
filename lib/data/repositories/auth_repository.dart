@@ -71,11 +71,8 @@ class AuthRepository {
 
       // firebaseToken = await messaging.getToken();
       // print(firebaseToken);
-      Response response = await HttpHelper.post(LOGIN_ENDPOINT, {
-        "username": username,
-        "password": password,
-        "fcm_token": firebaseToken
-      });
+      Response response = await HttpHelper.post(
+          LOGIN_ENDPOINT, {"username": username, "password": password});
       final Map<String, dynamic> data = <String, dynamic>{};
       data["status"] = response.statusCode;
       var jsonObject = jsonDecode(response.body);

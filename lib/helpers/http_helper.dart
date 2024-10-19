@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 const DOMAIN = 'https://across-mena.com/';
 
-const LOGIN_ENDPOINT = '${DOMAIN}aaa/jwt/create/';
+const LOGIN_ENDPOINT = '${DOMAIN}auth/jwt/create/';
 const USERS_ENDPOINT = '${DOMAIN}auth/users/';
 const PROFILE_ENDPOINT = '${DOMAIN}auth/users/me';
 const POSTS_ENDPOINT = '${DOMAIN}clearance/posts/';
