@@ -1,0 +1,1 @@
+enum UserType { trader, broker }

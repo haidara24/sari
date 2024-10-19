@@ -1,0 +1,4 @@
+enum PanelState {
+  hidden,
+  open,
+}
