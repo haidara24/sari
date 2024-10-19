@@ -108,42 +108,42 @@ class SelectUserType extends StatelessWidget {
                       SizedBox(
                         height: 16.h,
                       ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 62.w),
-                        child: CustomButton(
-                          title: Text(
-                            AppLocalizations.of(context)!.translate('broker'),
-                            style: TextStyle(
-                              color: AppColor.deepBlue,
-                              fontSize: 19.sp,
-                            ),
-                          ),
-                          color: Colors.white,
-                          onTap: () async {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const TraderSigninScreen(),
-                                ));
-                            userType = UserType.broker;
-                            SharedPreferences prefs =
-                                await SharedPreferences.getInstance();
+                      // Padding(
+                      //   padding: EdgeInsets.symmetric(horizontal: 62.w),
+                      //   child: CustomButton(
+                      //     title: Text(
+                      //       AppLocalizations.of(context)!.translate('broker'),
+                      //       style: TextStyle(
+                      //         color: AppColor.deepBlue,
+                      //         fontSize: 19.sp,
+                      //       ),
+                      //     ),
+                      //     color: Colors.white,
+                      //     onTap: () async {
+                      //       Navigator.push(
+                      //           context,
+                      //           MaterialPageRoute(
+                      //             builder: (context) =>
+                      //                 const TraderSigninScreen(),
+                      //           ));
+                      //       userType = UserType.broker;
+                      //       SharedPreferences prefs =
+                      //           await SharedPreferences.getInstance();
 
-                            String usertype = "Broker";
-                            switch (userType) {
-                              case UserType.trader:
-                                usertype = "Trader";
-                                break;
-                              case UserType.broker:
-                                usertype = "Broker";
-                                break;
-                              default:
-                            }
-                            prefs.setString("userType", usertype);
-                          },
-                        ),
-                      ),
+                      //       String usertype = "Broker";
+                      //       switch (userType) {
+                      //         case UserType.trader:
+                      //           usertype = "Trader";
+                      //           break;
+                      //         case UserType.broker:
+                      //           usertype = "Broker";
+                      //           break;
+                      //         default:
+                      //       }
+                      //       prefs.setString("userType", usertype);
+                      //     },
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

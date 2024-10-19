@@ -61,10 +61,10 @@ class SelectBrokerScreen extends StatefulWidget {
 }
 
 class _SelectBrokerScreenState extends State<SelectBrokerScreen> {
-  _buildAgenciesWidget(List<CustomeAgency> agencies) {
+  _buildAgenciesWidget(List<CustomeAgency> agencies, String lang) {
     List<Widget> list = [];
     for (var element in agencies) {
-      list.add(Text(element.name! + " ,"));
+      list.add(Text("${(lang == "en" ? element.name! : element.nameAr)!} ,"));
     }
 
     return list;
@@ -349,17 +349,21 @@ class _SelectBrokerScreenState extends State<SelectBrokerScreen> {
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                    "${AppLocalizations.of(context)!.translate('directorate')}: ${state.brokers[index].agencies![0].statecustome!.name!}"),
+                                                                    "${AppLocalizations.of(context)!.translate('directorate')}: ${localeState.value.languageCode == "en" ? state.brokers[index].agencies![0].statecustome!.name! : state.brokers[index].agencies![0].statecustome!.nameAr!}"),
                                                                 Text(
-                                                                    "Agencies:"),
+                                                                    "${AppLocalizations.of(context)!.translate('agencies')}:"),
                                                                 Column(
                                                                   crossAxisAlignment:
                                                                       CrossAxisAlignment
                                                                           .start,
-                                                                  children: _buildAgenciesWidget(state
-                                                                      .brokers[
-                                                                          index]
-                                                                      .agencies!),
+                                                                  children: _buildAgenciesWidget(
+                                                                      state
+                                                                          .brokers[
+                                                                              index]
+                                                                          .agencies!,
+                                                                      localeState
+                                                                          .value
+                                                                          .languageCode),
                                                                 ),
                                                               ],
                                                             ),

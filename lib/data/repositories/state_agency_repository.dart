@@ -368,6 +368,34 @@ class StateAgencyRepository {
       "notes": notes
     });
 
+    print(jsonEncode({
+      "offer_type": offerType,
+      "trader": trader,
+      "costume_broker": broker,
+      "costumeagency": costumeagency,
+      "costumestate": costumestate,
+      "products": products,
+      "source": source!.id!,
+      "origin": origin,
+      "package_type": packageType,
+      "packages_num": packagesNum,
+      "tabaleh_num": tabalehNum,
+      "raw_material": raw.toString(),
+      "industrial": industrial.toString(),
+      "brand": brands.toString(),
+      "tubes": tubes.toString(),
+      "colored": colored.toString(),
+      "lycra": lycra.toString(),
+      "weight": weight.toString(),
+      "price": price.toString(),
+      "taxes": taxes.toString(),
+      "totalweight": totalweight,
+      "totalprice": totalprice,
+      "totaltaxes": totaltaxes,
+      "expected_arrival_date": expectedArrivalDate,
+      "attachments": attachments,
+      "notes": notes
+    }));
     print(response.statusCode);
     var jsonObject = jsonDecode(response.body);
     if (response.statusCode == 201) {
@@ -375,6 +403,7 @@ class StateAgencyRepository {
       print(offer);
       return offer;
     } else {
+      print(response.body);
       return null;
     }
   }
