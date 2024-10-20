@@ -726,11 +726,12 @@ class _TraderHomeScreenState extends State<TraderHomeScreen>
                                   return Container(
                                     height: 75.h,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        colors: bottomNavbarColor(),
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                      ),
+                                      color: AppColor.deepAppBarBlue,
+                                      // gradient: LinearGradient(
+                                      //   colors: bottomNavbarColor(),
+                                      //   begin: Alignment.centerRight,
+                                      //   end: Alignment.centerLeft,
+                                      // ),
                                     ),
                                     child: TabBar(
                                       labelPadding: EdgeInsets.zero,

@@ -33,7 +33,7 @@ class CustomButton extends StatelessWidget {
               AppColor.deepYellow,
               AppColor.deepYellow,
               AppColor.deepYellow,
-              AppColor.lightYellow,
+              // AppColor.lightYellow
               AppColor.deepYellow,
               AppColor.deepYellow,
               AppColor.deepYellow,
